@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();
+import {users} from "./data"
+import "./style.css"
+
+const createBodyHtml=document.querySelector(".userBlock");
+
+const createCardHtml=({dataname, datatime, lorem}) =>`
+    <div class="user-block"> 
+        <p class="id">id: ${dataname}</p>
+        <p class="name">name: ${datatime}</p>
+        <p class="age">age: ${lorem}</p>
+    <div>`
+    
+const render= () => {
+    const usersCard= users.map((user) => {
+        const card = document.createElement("div")
+        card.className = "userCard main"
+        card.innerHTML = createCardHtml(user)
+
+        return card;
+    });
+
+    createBodyHtml.innerHTML = ""
+    createBodyHtml.append(...usersCard)
+}
+render()
