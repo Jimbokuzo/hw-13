@@ -48,14 +48,14 @@ h1:hover{
 }
 .notesCard{
     background: rgb(156, 156, 156);
-    margin: 15px;
+    margin: 25px;
     width: 400px;
     max-height: 450px;
     border-radius: 20px;
     padding-top: 7px;
     transition: 1s;
 }
-.notes-header{
+.notesHeader{
     font-size: 42px;
     color: rgb(26, 26, 26);
     padding-left: 30px;

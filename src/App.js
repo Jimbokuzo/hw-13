@@ -1,14 +1,18 @@
 import './App.css';
+import notes from "./notes.json"
 
 function App() {
-  return (
-  <div className="App">
-    <div className="notesCard">
-      <div className="notes-header">Mello</div>
-      <div className="data">21.05.22</div>
-      <div className="lorem">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.</div>
-    </div>
+
+  const list = notes.map( (item)=>(
+  <div  key={item.id} className="notesCard">
+    <div className="notesHeader">{item.notesHeader}</div>
+    <div className="data">{item.data}</div>
+    <div className="lorem">{item.lorem}</div>
   </div>
+))
+
+  return (
+  <div className="App">{list}</div>
   )
 }
 
