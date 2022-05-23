@@ -1,15 +1,17 @@
 import './App.css';
 import notes from "./notes.json"
 
-function App() {
-
-  const list = notes.map( (item)=>(
-  <div  key={item.id} className="notesCard">
-    <div className="notesHeader">{item.notesHeader}</div>
-    <div className="data">{item.data}</div>
-    <div className="lorem">{item.lorem}</div>
+const Note = ({data: { notesHeader, data, lorem} }) => (
+  <div className="notesCard">
+    <div className="notesHeader">{notesHeader}</div>
+    <div className="data">{data}</div>
+    <div className="lorem">{lorem}</div>
   </div>
-))
+)
+
+
+function App() {
+  const list = notes.map( (item)=> <Note key={item.id} data={item} />)
 
   return (
   <div className="App">{list}</div>
