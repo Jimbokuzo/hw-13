@@ -1,51 +1,51 @@
 [{
     "id": 1,
     "notesHeader": "Goldenrod",
-    "data": "21.02.2021",
+    "dataTime": "21.02.2021",
     "lorem": "Nondisplaced fracture of lateral condyle of left femur, subsequent encounter for open fracture type I or II with malunion"
   }, {
     "id": 2,
     "notesHeader": "Red",
-    "data": "16.09.2019",
+    "dataTime": "16.09.2019",
     "lorem": "Presence of cardiac pacemaker"
   }, {
     "id": 3,
     "notesHeader": "Red",
-    "data": "09.08.2019",
+    "dataTime": "09.08.2019",
     "lorem": "Nondisplaced fracture of neck of left talus, subsequent encounter for fracture with nonunion"
   }, {
     "id": 4,
     "notesHeader": "Puce",
-    "data": "03.10.2021",
+    "dataTime": "03.10.2021",
     "lorem": "Trisomy 13, unspecified"
   }, {
     "id": 5,
     "notesHeader": "Goldenrod",
-    "data": "22.12.2019",
+    "dataTime": "22.12.2019",
     "lorem": "Contusion and laceration of right cerebrum with loss of consciousness of 31 minutes to 59 minutes, initial encounter"
   }, {
     "id": 6,
     "notesHeader": "Mauv",
-    "data": "14.11.2019",
+    "dataTime": "14.11.2019",
     "lorem": "Dislocation of other parts of unspecified shoulder girdle, sequela"
   }, {
     "id": 7,
     "notesHeader": "Fuscia",
-    "data": "26.10.2020",
+    "dataTime": "26.10.2020",
     "lorem": "Car occupant (driver) (passenger) injured in other specified transport accidents"
   }, {
     "id": 8,
     "notesHeader": "Violet",
-    "data": "11.01.2020",
+    "dataTime": "11.01.2020",
     "lorem": "Abrasion of right middle finger, initial encounter"
   }, {
     "id": 9,
     "notesHeader": "Yellow",
-    "data": "15.11.2021",
+    "dataTime": "15.11.2021",
     "lorem": "Unspecified injury at T2-T6 level of thoracic spinal cord, subsequent encounter"
   }, {
     "id": 10,
     "notesHeader": "Blue",
-    "data": "06.08.2020",
+    "dataTime": "06.08.2020",
     "lorem": "Galeazzi's fracture of left radius, sequela"
   }]

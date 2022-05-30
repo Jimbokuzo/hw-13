@@ -1,13 +1,23 @@
-import "./App.css";
-import notes from "./notes.json"
-import NoteList from "./components/NoteList"
+import ResetCss from "./components/ResetCss";
+import notes from "./notes.json";
+import NoteList from "./components/NoteList";
+import Popup from "./components/Popup";
+import PopupBox from "./components/Popup/PopupBox";
+import Page from "./components/Page";
 
 function App() {
   return (
-  <div className="App">
-    <NoteList notes={notes}/>
-  </div>
-  )
+    <Page>
+      <ResetCss />
+      <PopupBox
+        buttonName="Add note"
+        title="Enter note data"
+        ContentComponent={Popup}
+      />
+
+      <NoteList notes={notes} />
+    </Page>
+  );
 }
 
 export default App;
