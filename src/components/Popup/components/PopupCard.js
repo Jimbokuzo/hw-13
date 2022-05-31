@@ -23,7 +23,7 @@ const PopupCard = ({ children, isOpen }) => (
       top: -500px;
       width: 100%;
       height: 100%;
-      position: relative;
+      position: fixed;
       display: flex;
       justify-content: center;
       align-items: center;

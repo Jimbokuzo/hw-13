@@ -3,8 +3,8 @@ import { css } from "@emotion/react";
 import PopupCard from "./components/PopupCard";
 import usePopup from "./hoocks/usePopup";
 
-function PopupBox({ buttonName, ContentComponent }) {
-  const { isOpen, isRender, onClose, onOpen } = usePopup();
+function Popup({ buttonName, children, isClosePopup }) {
+  const { isOpen, isRender, onClose, onOpen } = usePopup(isClosePopup);
 
   return (
     <div>
@@ -26,37 +26,41 @@ function PopupBox({ buttonName, ContentComponent }) {
       {isRender && (
         <div
           css={css`
+            position: fixed;
             width: 100%;
             height: 100%;
-            bottom: 0;
             top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
-            position: fixed;
-            background: rgba(0, 0, 0, 0.2);
-            transition: 0.8s;
+            background: #0000005e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
             opacity: ${isOpen ? "1" : "0"};
           `}
         >
           <PopupCard isOpen={isOpen}>
-            <span
+            <div
               css={css`
-                position: absolute;
-                z-index: 10;
-                display: flex;
-                justify-content: center;
-                top: 316px;
+                box-shadow: 0 0 20px rgb(10, 10, 10);
+                width: 300px;
+                min-height: 250px;
+                border-radius: 20px;
+                background: rgb(48, 48, 48);
               `}
-              onClick={onClose}
             >
-              <p
+              <span
                 css={css`
-                  margin-top: -38px;
-                  margin-left: 250px;
-                  cursor: pointer;
-                  width: 25px;
-                  height: 25px;
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-right: 10px;
+                  margin-top: 10px;
+                  z-index: 10;
+                  color: white;
                 `}
+                onClick={onClose}
               >
                 <img
                   css={css`
@@ -65,13 +69,13 @@ function PopupBox({ buttonName, ContentComponent }) {
                   `}
                   src="img/close.png"
                 />
-              </p>
-            </span>
-            <ContentComponent onClose={onClose} />
+              </span>
+              {children}
+            </div>
           </PopupCard>
         </div>
       )}
     </div>
   );
 }
-export default PopupBox;
+export default Popup;

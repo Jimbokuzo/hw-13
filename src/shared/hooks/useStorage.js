@@ -2,7 +2,7 @@ const setJsonItem = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
-const getJsonIten = (key) => JSON.parse(localStorage.getItem(key));
+const getJsonItem = (key) => JSON.parse(localStorage.getItem(key));
 
 const setItem = (key, value) => {
   localStorage.setItem(key, value);
@@ -10,11 +10,9 @@ const setItem = (key, value) => {
 
 const getItem = (key) => localStorage.getItem(key);
 
-const useSrorage = () => ({
+export const useStorage = () => ({
   setJsonItem,
-  getJsonIten,
+  getJsonItem,
   getItem,
   setItem,
 });
-
-export default useSrorage;
